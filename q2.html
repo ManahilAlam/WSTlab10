@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-lightbox/0.5.0/js/jquery.lightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-lightbox/0.5.0/css/jquery.lightbox.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+        section {
+            padding: 50px;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .project {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+        }
+        .project img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+
+    <section data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>Hi, I'm Manahil, a passionate web developer with experience in front-end and back-end technologies. Welcome to my portfolio!</p>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2>Projects</h2>
+        <div class="project">
+            <a href="https://github.com/ManahilAlam/magazine-web" class="lightbox">
+                <img src="" alt="Project 1">
+            </a>
+        </div>
+        <div class="project">
+            <a href="https://via.placeholder.com/600x400" class="lightbox">
+                <img src="https://via.placeholder.com/300x200" alt="Project 2">
+            </a>
+        </div>
+        <div class="project">
+            <a href="https://via.placeholder.com/600x400" class="lightbox">
+                <img src="https://via.placeholder.com/300x200" alt="Project 3">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact me at: manahil.ba.alam@gmail.com</p>
+    </footer>
+
+    <script>
+        AOS.init();
+        $('.lightbox').lightbox();
+    </script>
+
+</body>
+</html>

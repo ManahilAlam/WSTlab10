@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            background-color: lightblue;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#">Click me to hide all links</a><br>
+    <a href="#">Another link</a><br>
+    <a href="#">Hide on double-click</a><br>
+    
+    <div id="test" class="test">Test Div</div>
+
+    <a href="#">Add classes to this link</a><br>
+    
+    <div>Resize Me!</div>
+
+    <div id="animateDiv">Animate Me!</div>
+
+    <button id="animateBtn">Animate Div to the Right</button>
+
+    <script>
+        // 1. Hide all <a> elements
+        $("a").click(function() {
+            $("a").hide();
+        });
+
+        // 2. Hide an element with id="test"
+        $("#test").click(function() {
+            $(this).hide();
+        });
+
+        // 3. Hide all elements with class="test"
+        $(".test").click(function() {
+            $(".test").hide();
+        });
+
+        // 4. Hide all <a> elements on double-click
+        $("a").dblclick(function() {
+            $("a").hide();
+        });
+
+        // 5. Animate <div> element's opacity, height, and width
+        $("div").click(function() {
+            $(this).animate({
+                opacity: 0.2,
+                height: "600px",
+                width: "600px"
+            });
+        });
+
+        // 6. Add both "important" and "test" classes to <a> element
+        $("a").click(function() {
+            $(this).addClass("important test");
+        });
+
+        // 7. Set height and width of <div> to 500px
+        $("div").click(function() {
+            $(this).height(500).width(500);
+        });
+
+        // 8. Get the height of <div> including padding and border
+        var height = $("div").outerHeight();
+        console.log("Height including padding and border: " + height);
+
+        // 9. Attach a click event handler to all <a> elements
+        $("a").on("click", function() {
+            alert("You clicked on a link!");
+        });
+
+        // 10. Move <div> 300px to the right
+        $("#animateBtn").click(function() {
+            $("#animateDiv").animate({
+                left: "+=300px"
+            });
+        });
+    </script>
+
+</body>
+</html>
